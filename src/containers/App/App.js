@@ -3,6 +3,7 @@ import './App.css';
 import Header from "../../components/Header/Header";
 import Clock from '../../components/Clock';
 import Loading from '../../components/Loading';
+import ClockWithHook from '../../components/ClockWithHook';
 
 class App extends React.Component {
   state = { showClock: false };
@@ -17,7 +18,7 @@ class App extends React.Component {
     return <div className="App" >
       <Header></Header>
 
-      <div className="text-center pt-5">
+      {/* <div className="text-center pt-5">
         <button className="btn btn-dark mb-3" onClick={this.toggleClock}>
           {this.state.showClock && "Hide" || "Show"}
         </button>
@@ -26,6 +27,10 @@ class App extends React.Component {
       </div>
       <div className="text-center mt-4">
         <Loading />
+      </div> */}
+
+      <div className="text-center py-5">
+        <ClockWithHook />
       </div>
     </div>
   }
